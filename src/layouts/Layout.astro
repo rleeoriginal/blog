@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+import Introduction from "../components/Introduction.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+	<body class="bg-[#f6fcff]">
+		<div class="sm:h-screen flex flex-col">
+			<!-- nav bar -->
+			<div class="min-h-[56px] border-b-1 border-gray-200">
+				<div class="mx-auto max-w-[740px] relative">
+					<div class="text-[26px] float-left leading-[56px] font-normal">
+						<a class="hover:uppercase hover:border p-1" href="/">roy lee</a>
+					</div>
+					<div class="float-right leading-[56px] flex gap-10">
+						<div>
+							<a class="hover:uppercase hover:border p-2" href="https://www.linkedin.com/in/roylee24/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+						</div>
+						<div>
+							<a class="hover:uppercase hover:border p-2" href="https://github.com/rleeoriginal" target="_blank" rel="noopener noreferrer">GitHub</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- main content -->
+			<div class="grow-1 py-[30px]">
+				<div class="max-w-[740px] mx-auto h-full flex flex-col">
+					<div class="">
+						<Introduction />
+					</div>
+					<div class="">
+						<Navigation />
+					</div>
+					<div class="grow-1">
+						<slot />
+
+					</div>
+					
+					
+					
+					
+
+					
+
+
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!--
+bg-[#f6fcff]
+#141414
+-->
